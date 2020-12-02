@@ -6,15 +6,36 @@ import { Helmet } from "react-helmet"
 
 import ThemeSwitcher from "../components/themeSwitcher/themeSwitcher";
 
-export const StyleH1 = styled.h1`
-  color: ${({ theme }) => theme.primaryColor};
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 42px;
+export const StyledFirstView = styled.div`
+  height: 100vh;
+  width: 100vw;
+
+  .headingWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    color: ${({ theme }) => theme.body};
+    font-size: 42px;
+    text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.primaryColor}, 1px -1px 0 ${theme.primaryColor}, -1px 1px 0 ${theme.primaryColor}, 1px 1px 0 ${theme.primaryColor}`};
+    text-align: center;
+    line-height: 3rem;
+  }
+
+  h2 {
+    text-align: center;
+    color: ${({ theme }) => theme.text};
+    font-weight: 300;
+    letter-spacing: 2px;
+    //text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.text}, 1px -1px 0 ${theme.text}, -1px 1px 0 ${theme.text}, 1px 1px 0 ${theme.text}`};
+  }
 `;
+
+
 
 
 const IndexPage = () => {
@@ -39,7 +60,12 @@ const IndexPage = () => {
         </Helmet>
       <GlobalStyle />
       <ThemeSwitcher theme={theme} setTheme={setTheme}/>
-      <StyleH1>Simone Paccamonti</StyleH1>
+      <StyledFirstView>
+        <div className="headingWrapper">
+          <h1>Simone Paccamonti</h1>
+          <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
+        </div>
+      </StyledFirstView>
     </ThemeProvider>
   )
 }
