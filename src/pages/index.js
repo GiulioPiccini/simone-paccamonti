@@ -6,6 +6,16 @@ import { Helmet } from "react-helmet"
 
 import ThemeSwitcher from "../components/themeSwitcher/themeSwitcher";
 
+export const StyleH1 = styled.h1`
+  color: ${({ theme }) => theme.primaryColor};
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 42px;
+`;
+
 
 const IndexPage = () => {
   const [theme, setTheme] = useState('dark');
@@ -29,7 +39,7 @@ const IndexPage = () => {
         </Helmet>
       <GlobalStyle />
       <ThemeSwitcher theme={theme} setTheme={setTheme}/>
-      <h1>Simone Paccamonti</h1>
+      <StyleH1>Simone Paccamonti</StyleH1>
     </ThemeProvider>
   )
 }
