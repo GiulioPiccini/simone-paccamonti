@@ -7,7 +7,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Simone Paccamonti</h1>
-    <p>Bar Manager And bukkini</p>
+   
   </Layout>
 )
 
