@@ -5,17 +5,19 @@ import {lightTheme, darkTheme} from "../styles/theme"
 import { Helmet } from "react-helmet"
 
 import ThemeSwitcher from "../components/themeSwitcher/themeSwitcher";
-import ScrollIcon from "../components/scrollIcon/scrollIncon";
 
 export const StyledView = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100vw;
-  min-height: 100vh;
+
+  .firstView {
+    height: 100vh;
+  }
 
   .headingWrapper {
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
@@ -37,7 +39,7 @@ export const StyledView = styled.div`
   }
 
   .headingBiographyWrapper {
-    margin: 3rem 0 0 2rem;
+    margin: 3rem 2rem 0 2rem;
     h3 {
       text-align: left;
       font-size: 46px;
@@ -47,17 +49,20 @@ export const StyledView = styled.div`
   }
 
   .headingPortfolioWrapper {
-    margin: 3rem 2rem 0 0;
+    margin: 3rem 2rem 0 2rem;
     h3 {
       text-align: right;
       font-size: 46px;
       color: ${({ theme }) => theme.body};
       text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.primaryColor}, 1px -1px 0 ${theme.primaryColor}, -1px 1px 0 ${theme.primaryColor}, 1px 1px 0 ${theme.primaryColor}`};
     }
+    p {
+      text-align: right;
+    }
   }
 
   .headingContactWrapper {
-    margin: 3rem 0 0 2rem;
+    margin: 3rem 2rem 0 2rem;
     h3 {
       text-align: left;
       font-size: 46px;
@@ -67,7 +72,7 @@ export const StyledView = styled.div`
   }
 
   .headingGalleryWrapper {
-    margin: 3rem 2rem 0 0;
+    margin: 3rem 2rem 0 2rem;
     h3 {
       text-align: right;
       font-size: 46px;
@@ -96,29 +101,28 @@ const IndexPage = () => {
         </Helmet>
       <GlobalStyle />
       <ThemeSwitcher theme={theme} setTheme={setTheme}/>
-      <ScrollIcon onClick={() => window.scrollTo({top: parseInt(window.pageYOffset/window.innerHeight + 1) * window.innerHeight, behavior: 'smooth'})} />
       <StyledView>
-        <div className="headingWrapper">
-          <h1>Simone Paccamonti</h1>
-          <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
+        <div className="firstView">
+          <div className="headingWrapper">
+            <h1>Simone Paccamonti</h1>
+            <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
+          </div>
         </div>
-      </StyledView>
-      <StyledView>
         <div className="headingBiographyWrapper">
           <h3>Biografia</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
         </div>
-      </StyledView>
-      <StyledView>
         <div className="headingPortfolioWrapper">
           <h3>Portfolio</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
         </div>
-      </StyledView>
-      <StyledView>
         <div className="headingContactWrapper">
           <h3>Contattami</h3>
         </div>
-      </StyledView>
-      <StyledView>
         <div className="headingGalleryWrapper">
           <h3>Gallery</h3>
         </div>
