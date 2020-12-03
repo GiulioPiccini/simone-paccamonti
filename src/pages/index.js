@@ -10,6 +10,7 @@ import ScrollIcon from "../components/scrollIcon/scrollIncon";
 export const StyledView = styled.div`
   height: 100vh;
   width: 100vw;
+  min-height: -webkit-fill-available;
 
   .headingWrapper {
     position: absolute;
