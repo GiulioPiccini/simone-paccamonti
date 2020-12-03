@@ -42,13 +42,6 @@ export const StyledView = styled.div`
 const IndexPage = () => {
   const [theme, setTheme] = useState('dark');
 
-  const changeTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
-  }
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <Helmet>
