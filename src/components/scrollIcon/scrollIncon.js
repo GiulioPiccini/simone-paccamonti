@@ -9,6 +9,7 @@ export const StyledScrollIcon = styled.div`
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
+    outline: none;
 
     .pos {
         position: relative;
