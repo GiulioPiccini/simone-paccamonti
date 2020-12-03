@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const StyledScrollIcon = styled.div`
     border: 1px solid ${({ theme }) => theme.primaryColor};
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);

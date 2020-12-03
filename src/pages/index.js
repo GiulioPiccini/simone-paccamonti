@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet"
 import ThemeSwitcher from "../components/themeSwitcher/themeSwitcher";
 import ScrollIcon from "../components/scrollIcon/scrollIncon";
 
-export const StyledFirstView = styled.div`
+export const StyledView = styled.div`
   height: 100vh;
   width: 100vw;
 
@@ -61,13 +61,14 @@ const IndexPage = () => {
         </Helmet>
       <GlobalStyle />
       <ThemeSwitcher theme={theme} setTheme={setTheme}/>
-      <StyledFirstView>
+      <ScrollIcon onClick={() => window.scrollTo({top: parseInt(window.pageYOffset/window.innerHeight + 1) * window.innerHeight, behavior: 'smooth'})} />
+      <StyledView>
         <div className="headingWrapper">
           <h1>Simone Paccamonti</h1>
           <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
         </div>
-        <ScrollIcon />
-      </StyledFirstView>
+      </StyledView>
+      <StyledView />
     </ThemeProvider>
   )
 }
