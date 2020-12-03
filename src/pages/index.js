@@ -35,57 +35,46 @@ export const StyledView = styled.div`
     letter-spacing: 2px;
   }
 
-  .headingBiografyWrapper {
-    margin: 6rem 0 0 2rem;
+  .headingBiographyWrapper {
+    margin: 3rem 0 0 2rem;
     h3 {
       text-align: left;
       font-size: 46px;
       color: ${({ theme }) => theme.body};
       text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.secondaryColor}, 1px -1px 0 ${theme.secondaryColor}, -1px 1px 0 ${theme.secondaryColor}, 1px 1px 0 ${theme.secondaryColor}`};
     }
-    .btn{
-      cursor:pointer;
-      position:relative;
-      padding:10px 20px;
-      background:white;
-      font-size:28px;
-      border-top-right-radius:10px;
-      border-bottom-left-radius:10px;
-      transition:all 1s;
-      color: ${({ theme }) => theme.primaryColor};
-      &:after,&:before{
-        content:" ";
-        width:10px;
-        height:10px;
-        position:absolute;
-        border :0px solid ${({ theme }) => theme.body};
-        transition:all 1s;
-        }
-      &:after{
-        top:-1px;
-        left:-1px;
-        border-top: 3px solid ${({ theme }) => theme.primaryColor};
-        border-left: 3px solid ${({ theme }) => theme.primaryColor};
-      }
-      &:before{
-        bottom: -1px;
-        right: -1px;
-        border-bottom: 3px solid ${({ theme }) => theme.primaryColor};
-        border-right: 3px solid ${({ theme }) => theme.primaryColor};
-      }
-      &:hover{
-        border-top-right-radius:0px;
-      border-bottom-left-radius:0px;
-          //background:rgba(0,0,0,.5);
-          color: ${({ theme }) => theme.primaryColor};
-        &:before,&:after{
-          width:100%;
-          height:100%;
-          border-color: ${({ theme }) => theme.primaryColor};
-        }
-      }
+  }
+
+  .headingPortfolioWrapper {
+    margin: 3rem 2rem 0 0;
+    h3 {
+      text-align: right;
+      font-size: 46px;
+      color: ${({ theme }) => theme.body};
+      text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.primaryColor}, 1px -1px 0 ${theme.primaryColor}, -1px 1px 0 ${theme.primaryColor}, 1px 1px 0 ${theme.primaryColor}`};
     }
   }
+
+  .headingContactWrapper {
+    margin: 3rem 0 0 2rem;
+    h3 {
+      text-align: left;
+      font-size: 46px;
+      color: ${({ theme }) => theme.body};
+      text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.secondaryColor}, 1px -1px 0 ${theme.secondaryColor}, -1px 1px 0 ${theme.secondaryColor}, 1px 1px 0 ${theme.secondaryColor}`};
+    }
+  }
+
+  .headingGalleryWrapper {
+    margin: 3rem 2rem 0 0;
+    h3 {
+      text-align: right;
+      font-size: 46px;
+      color: ${({ theme }) => theme.body};
+      text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.primaryColor}, 1px -1px 0 ${theme.primaryColor}, -1px 1px 0 ${theme.primaryColor}, 1px 1px 0 ${theme.primaryColor}`};
+    }
+  }
+
 `;
 
 
@@ -114,9 +103,23 @@ const IndexPage = () => {
         </div>
       </StyledView>
       <StyledView>
-        <div className="headingBiografyWrapper">
+        <div className="headingBiographyWrapper">
           <h3>Biografia</h3>
-          <span class="btn">Hover Me </span>
+        </div>
+      </StyledView>
+      <StyledView>
+        <div className="headingPortfolioWrapper">
+          <h3>Portfolio</h3>
+        </div>
+      </StyledView>
+      <StyledView>
+        <div className="headingContactWrapper">
+          <h3>Contattami</h3>
+        </div>
+      </StyledView>
+      <StyledView>
+        <div className="headingGalleryWrapper">
+          <h3>Gallery</h3>
         </div>
       </StyledView>
     </ThemeProvider>
