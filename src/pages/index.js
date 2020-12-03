@@ -14,25 +14,77 @@ export const StyledView = styled.div`
   .headingWrapper {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 45%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
 
   h1 {
-    color: ${({ theme }) => theme.body};
-    font-size: 42px;
-    text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.primaryColor}, 1px -1px 0 ${theme.primaryColor}, -1px 1px 0 ${theme.primaryColor}, 1px 1px 0 ${theme.primaryColor}`};
     text-align: center;
+    font-size: 46px;
+    color: ${({ theme }) => theme.body};
+    text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.primaryColor}, 1px -1px 0 ${theme.primaryColor}, -1px 1px 0 ${theme.primaryColor}, 1px 1px 0 ${theme.primaryColor}`};
     line-height: 3rem;
   }
 
   h2 {
     text-align: center;
-    color: ${({ theme }) => theme.text};
+    font-size: 28px;
     font-weight: 300;
+    color: ${({ theme }) => theme.text};
     letter-spacing: 2px;
-    //text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.text}, 1px -1px 0 ${theme.text}, -1px 1px 0 ${theme.text}, 1px 1px 0 ${theme.text}`};
+  }
+
+  .headingBiografyWrapper {
+    margin: 6rem 0 0 2rem;
+    h3 {
+      text-align: left;
+      font-size: 46px;
+      color: ${({ theme }) => theme.body};
+      text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.secondaryColor}, 1px -1px 0 ${theme.secondaryColor}, -1px 1px 0 ${theme.secondaryColor}, 1px 1px 0 ${theme.secondaryColor}`};
+    }
+    .btn{
+      cursor:pointer;
+      position:relative;
+      padding:10px 20px;
+      background:white;
+      font-size:28px;
+      border-top-right-radius:10px;
+      border-bottom-left-radius:10px;
+      transition:all 1s;
+      color: ${({ theme }) => theme.primaryColor};
+      &:after,&:before{
+        content:" ";
+        width:10px;
+        height:10px;
+        position:absolute;
+        border :0px solid ${({ theme }) => theme.body};
+        transition:all 1s;
+        }
+      &:after{
+        top:-1px;
+        left:-1px;
+        border-top: 3px solid ${({ theme }) => theme.primaryColor};
+        border-left: 3px solid ${({ theme }) => theme.primaryColor};
+      }
+      &:before{
+        bottom: -1px;
+        right: -1px;
+        border-bottom: 3px solid ${({ theme }) => theme.primaryColor};
+        border-right: 3px solid ${({ theme }) => theme.primaryColor};
+      }
+      &:hover{
+        border-top-right-radius:0px;
+      border-bottom-left-radius:0px;
+          //background:rgba(0,0,0,.5);
+          color: ${({ theme }) => theme.primaryColor};
+        &:before,&:after{
+          width:100%;
+          height:100%;
+          border-color: ${({ theme }) => theme.primaryColor};
+        }
+      }
+    }
   }
 `;
 
@@ -61,7 +113,12 @@ const IndexPage = () => {
           <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
         </div>
       </StyledView>
-      <StyledView />
+      <StyledView>
+        <div className="headingBiografyWrapper">
+          <h3>Biografia</h3>
+          <span class="btn">Hover Me </span>
+        </div>
+      </StyledView>
     </ThemeProvider>
   )
 }
