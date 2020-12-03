@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export const StyledScrollIcon = styled.div`
-    position: absolute;
+    position: fixed;
     left: 50%;
     width: 40px;
     height: 40px;
