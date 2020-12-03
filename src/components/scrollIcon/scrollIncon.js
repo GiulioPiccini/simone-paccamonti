@@ -13,6 +13,7 @@ export const StyledScrollIcon = styled.div`
     border-top: none;
     border-right: 2px ${({ theme }) => theme.primaryColor} solid;
     border-bottom: 2px ${({ theme }) => theme.primaryColor} solid;
+    cursor: pointer;
     :before {
         position: absolute;
         left: 50%;
