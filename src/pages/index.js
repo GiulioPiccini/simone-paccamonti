@@ -5,6 +5,7 @@ import {lightTheme, darkTheme} from "../styles/theme"
 import { Helmet } from "react-helmet"
 
 import ThemeSwitcher from "../components/themeSwitcher/themeSwitcher";
+import ScrollIcon from "../components/scrollIcon/scrollIncon";
 
 export const StyledFirstView = styled.div`
   height: 100vh;
@@ -65,6 +66,7 @@ const IndexPage = () => {
           <h1>Simone Paccamonti</h1>
           <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
         </div>
+        <ScrollIcon />
       </StyledFirstView>
     </ThemeProvider>
   )
