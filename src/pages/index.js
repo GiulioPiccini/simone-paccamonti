@@ -114,11 +114,12 @@ const IndexPage = () => {
       <StyledView>
         <div className="firstView" />
           <div className="headingWrapper">
-          <Zoom cascade delay={300}>
-            <h1>Simone Paccamonti</h1>
+          <Zoom delay={300}>
+            <h1>Simone 
+              Paccamonti</h1>
           </Zoom>
-          <Zoom cascade delay={1000}>
-            <h2>Bar Manager &amp; Bartender</h2>
+          <Zoom delay={1000}>
+            <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
           </Zoom>
           </div>
         <div className="headingBiographyWrapper">
