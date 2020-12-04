@@ -4,7 +4,9 @@ import GlobalStyle from "../styles/globalStyles"
 import {lightTheme, darkTheme} from "../styles/theme"
 import { Helmet } from "react-helmet"
 
+import MainImage from "../../static/cocktail-beach.jpg"
 import ThemeSwitcher from "../components/themeSwitcher/themeSwitcher";
+
 
 export const StyledView = styled.div`
   height: 100%;
@@ -12,6 +14,9 @@ export const StyledView = styled.div`
 
   .firstView {
     height: 100vh;
+    background-image: url(${MainImage});
+    background-size: cover;
+    filter: grayscale(${({ theme }) => theme.grayScale});
   }
 
   .headingWrapper {
@@ -25,9 +30,12 @@ export const StyledView = styled.div`
   h1 {
     text-align: center;
     font-size: 46px;
-    color: ${({ theme }) => theme.body};
-    text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.primaryColor}, 1px -1px 0 ${theme.primaryColor}, -1px 1px 0 ${theme.primaryColor}, 1px 1px 0 ${theme.primaryColor}`};
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: ${({ theme }) => theme.primaryColor};
     line-height: 3rem;
+    letter-spacing: 5px;
+    margin-bottom: 3rem
   }
 
   h2 {
@@ -102,12 +110,12 @@ const IndexPage = () => {
       <GlobalStyle />
       <ThemeSwitcher theme={theme} setTheme={setTheme}/>
       <StyledView>
-        <div className="firstView">
-          <div className="headingWrapper">
-            <h1>Simone Paccamonti</h1>
-            <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
-          </div>
+        <div className="firstView" />
+        <div className="headingWrapper">
+          <h1>Simone Paccamonti</h1>
+          <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
         </div>
+
         <div className="headingBiographyWrapper">
           <h3>Biografia</h3>
           <p>

@@ -3,6 +3,7 @@ export const lightTheme = {
     text: '#222222',
     primaryColor: '#F82656',
     secondaryColor: '#153243',
+    grayScale: '0',
 }
 
 export const darkTheme = {
@@ -10,4 +11,5 @@ export const darkTheme = {
     text: '#FFFFFF',
     primaryColor: '#F82656',
     secondaryColor: '#A6DCF7',
+    grayScale: '100%',
 }
