@@ -3,6 +3,8 @@ import styled, { ThemeProvider } from "styled-components"
 import GlobalStyle from "../styles/globalStyles"
 import {lightTheme, darkTheme} from "../styles/theme"
 import { Helmet } from "react-helmet"
+import Zoom from "react-reveal/Zoom";
+
 
 import MainImage from "../../static/cocktail-beach.jpg"
 import ThemeSwitcher from "../components/themeSwitcher/themeSwitcher";
@@ -111,11 +113,14 @@ const IndexPage = () => {
       <ThemeSwitcher theme={theme} setTheme={setTheme}/>
       <StyledView>
         <div className="firstView" />
-        <div className="headingWrapper">
-          <h1>Simone Paccamonti</h1>
-          <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
-        </div>
-
+          <div className="headingWrapper">
+          <Zoom cascade delay={300}>
+            <h1>Simone Paccamonti</h1>
+          </Zoom>
+          <Zoom cascade delay={1000}>
+            <h2>Bar Manager &amp; Bartender</h2>
+          </Zoom>
+          </div>
         <div className="headingBiographyWrapper">
           <h3>Biografia</h3>
           <p>
