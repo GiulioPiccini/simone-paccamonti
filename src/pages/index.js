@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet"
 import Zoom from "react-reveal/Zoom";
 
 
-import MainImage from "../../static/cocktail-beach.jpg"
+import HeaderImage from "../../static/header.jpg"
 import ThemeSwitcher from "../components/themeSwitcher/themeSwitcher";
 
 
@@ -16,7 +16,10 @@ export const StyledView = styled.div`
 
   .firstView {
     height: 100vh;
-    background-image: url(${MainImage});
+    background-image: url(${HeaderImage});
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     filter: grayscale(${({ theme }) => theme.grayScale});
   }
