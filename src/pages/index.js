@@ -1,7 +1,7 @@
-import React, {useState} from "react"
+import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 import GlobalStyle from "../styles/globalStyles"
-import {lightTheme, darkTheme} from "../styles/theme"
+import {lightTheme} from "../styles/theme"
 import { Helmet } from "react-helmet"
 
 import HeaderImage from "../../static/header.jpg"
@@ -22,28 +22,27 @@ export const StyledView = styled.div`
   .headingWrapper {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 25%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
 
   h1 {
     text-align: center;
-    font-size: 46px;
+    font-size: 32px;
     color: ${({ theme }) => theme.primaryColor};
-    line-height: 3rem;
-    letter-spacing: 5px;
-    margin-bottom: 3rem;
-    font-family: 'Indie Flower', cursive;
+    letter-spacing: 1px;
+    font-family: ${({ theme }) => theme.primaryFont};
+    margin: 0.75rem 0 0 0;
   }
 
   h2 {
     text-align: center;
-    font-size: 60px;
-    font-weight: 300;
+    font-size: 14px;
     color: ${({ theme }) => theme.secondaryColor};
-    letter-spacing: 2px;
-    font-family: 'Indie Flower', cursive;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 0;
   }
 
   .headingBiographyWrapper {
@@ -109,6 +108,7 @@ const IndexPage = () => {
       <GlobalStyle />
       <StyledView>
         <h1>Simone Paccamonti</h1>
+        <h2>Bar Manager &amp; Bartender</h2>
         <div className="firstView" />
           <div className="headingWrapper">
             <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
