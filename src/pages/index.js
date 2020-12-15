@@ -13,7 +13,7 @@ export const StyledView = styled.div`
   .firstView {
     height: 100vh;
     background-image: url(${HeaderImage});
-    height: 500px;
+    height: 200px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,10 +39,12 @@ export const StyledView = styled.div`
   h2 {
     text-align: center;
     font-size: 14px;
-    color: ${({ theme }) => theme.secondaryColor};
+    color: ${({ theme }) => theme.body};
     letter-spacing: 1px;
-    font-weight: 300;
+    font-family: ${({ theme }) => theme.secondaryFont};
     margin: 0;
+    padding: 0.25rem 0;
+    background: ${({ theme }) => theme.secondaryColor};
   }
 
   .headingBiographyWrapper {
@@ -110,9 +112,6 @@ const IndexPage = () => {
         <h1>Simone Paccamonti</h1>
         <h2>Bar Manager &amp; Bartender</h2>
         <div className="firstView" />
-          <div className="headingWrapper">
-            <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
-          </div>
         <div className="headingBiographyWrapper">
           <h3>Biografia</h3>
           <p>

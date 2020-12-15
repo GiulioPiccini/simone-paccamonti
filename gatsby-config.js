@@ -21,6 +21,7 @@ module.exports = {
       options: {
         fonts: [
           `Indie Flower`,
+          `Montserrat\:300`,
         ],
         display: 'swap'
       }
