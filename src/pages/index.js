@@ -5,6 +5,7 @@ import {lightTheme} from "../styles/theme"
 import { Helmet } from "react-helmet"
 
 import HeaderImage from "../../static/header.jpg"
+import MeImage from "../../static/chi-sono.jpg"
 
 export const StyledView = styled.div`
   height: 100%;
@@ -52,6 +53,10 @@ export const StyledView = styled.div`
     text-align: center;
     color: ${({ theme }) => theme.secondaryColor};
     margin: 2rem 2rem;
+  }
+
+  .meImage {
+    width: 100vw;
   }
 
   .headingBiographyWrapper {
@@ -120,8 +125,9 @@ const IndexPage = () => {
         <h2>Bar Manager &amp; Bartender</h2>
         <div className="firstView" />
         <p className="firstParagraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         </p>
+        <img src={MeImage} alt="Chi sono" className="meImage"/>
         <div className="headingBiographyWrapper">
           <h3>Biografia</h3>
           <p>
