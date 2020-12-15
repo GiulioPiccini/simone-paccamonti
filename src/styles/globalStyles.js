@@ -14,8 +14,8 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     transition: all 0.25s linear;
   }
-  h1, h2, p {
-    font-family: 'Poppins', sans-serif;
+  h2, h3, p {
+    font-family: ${({ theme }) => theme.secondaryFont};
   }
   p {
     font-size: 20px;

@@ -13,7 +13,7 @@ export const StyledView = styled.div`
   .firstView {
     height: 100vh;
     background-image: url(${HeaderImage});
-    height: 200px;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,7 +29,7 @@ export const StyledView = styled.div`
 
   h1 {
     text-align: center;
-    font-size: 32px;
+    font-size: 36px;
     color: ${({ theme }) => theme.primaryColor};
     letter-spacing: 1px;
     font-family: ${({ theme }) => theme.primaryFont};
@@ -38,13 +38,20 @@ export const StyledView = styled.div`
 
   h2 {
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     color: ${({ theme }) => theme.body};
     letter-spacing: 1px;
     font-family: ${({ theme }) => theme.secondaryFont};
     margin: 0;
     padding: 0.25rem 0;
     background: ${({ theme }) => theme.secondaryColor};
+  }
+
+  .firstParagraph {
+    font-size: 14px;
+    text-align: center;
+    color: ${({ theme }) => theme.secondaryColor};
+    margin: 2rem 2rem;
   }
 
   .headingBiographyWrapper {
@@ -112,6 +119,9 @@ const IndexPage = () => {
         <h1>Simone Paccamonti</h1>
         <h2>Bar Manager &amp; Bartender</h2>
         <div className="firstView" />
+        <p className="firstParagraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
         <div className="headingBiographyWrapper">
           <h3>Biografia</h3>
           <p>
