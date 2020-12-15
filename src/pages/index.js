@@ -21,7 +21,6 @@ export const StyledView = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: grayscale(${({ theme }) => theme.grayScale});
   }
 
   .headingWrapper {
@@ -35,20 +34,20 @@ export const StyledView = styled.div`
   h1 {
     text-align: center;
     font-size: 46px;
-    color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: ${({ theme }) => theme.primaryColor};
+    color: ${({ theme }) => theme.primaryColor};
     line-height: 3rem;
     letter-spacing: 5px;
-    margin-bottom: 3rem
+    margin-bottom: 3rem;
+    font-family: 'Indie Flower', cursive;
   }
 
   h2 {
     text-align: center;
-    font-size: 28px;
+    font-size: 60px;
     font-weight: 300;
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.secondaryColor};
     letter-spacing: 2px;
+    font-family: 'Indie Flower', cursive;
   }
 
   .headingBiographyWrapper {
@@ -115,15 +114,10 @@ const IndexPage = () => {
       <GlobalStyle />
       <ThemeSwitcher theme={theme} setTheme={setTheme}/>
       <StyledView>
+        <h1>Simone Paccamonti</h1>
         <div className="firstView" />
           <div className="headingWrapper">
-          <Zoom delay={300}>
-            <h1>Simone 
-              Paccamonti</h1>
-          </Zoom>
-          <Zoom delay={1000}>
             <h2>Bar Manager <br/> &amp; <br/> Bartender</h2>
-          </Zoom>
           </div>
         <div className="headingBiographyWrapper">
           <h3>Biografia</h3>
