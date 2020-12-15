@@ -3,12 +3,8 @@ import styled, { ThemeProvider } from "styled-components"
 import GlobalStyle from "../styles/globalStyles"
 import {lightTheme, darkTheme} from "../styles/theme"
 import { Helmet } from "react-helmet"
-import Zoom from "react-reveal/Zoom";
-
 
 import HeaderImage from "../../static/header.jpg"
-import ThemeSwitcher from "../components/themeSwitcher/themeSwitcher";
-
 
 export const StyledView = styled.div`
   height: 100%;
@@ -99,10 +95,9 @@ export const StyledView = styled.div`
 
 
 const IndexPage = () => {
-  const [theme, setTheme] = useState('dark');
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={lightTheme}>
       <Helmet>
           <title>Simone Paccamonti | Bar Manager</title>
           <meta charset="UTF-8" />
@@ -112,7 +107,6 @@ const IndexPage = () => {
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Helmet>
       <GlobalStyle />
-      <ThemeSwitcher theme={theme} setTheme={setTheme}/>
       <StyledView>
         <h1>Simone Paccamonti</h1>
         <div className="firstView" />
