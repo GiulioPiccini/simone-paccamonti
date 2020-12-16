@@ -56,7 +56,9 @@ export const StyledView = styled.div`
   }
 
   .meImage {
-    width: 100vw;
+    width: 70%;
+    display: block;
+    margin: auto;
   }
 
   .headingBiographyWrapper {
