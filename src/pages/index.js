@@ -64,11 +64,12 @@ export const StyledView = styled.div`
   .headingBiographyWrapper {
     margin: 0 2rem 0 2rem;
     h3 {
+      letter-spacing: 1px;
       text-align: left;
       font-size: 46px;
       font-family: ${({ theme }) => theme.primaryFont};
-      color: ${({ theme }) => theme.secondaryColor};
-      text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.primaryColor}, 1px -1px 0 ${theme.primaryColor}, -1px 1px 0 ${theme.primaryColor}, 1px 1px 0 ${theme.primaryColor}`};
+      color: ${({ theme }) => theme.primaryColor};
+      text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.secondaryColor}, 1px -1px 0 ${theme.secondaryColor}, -1px 1px 0 ${theme.secondaryColor}, 1px 1px 0 ${theme.secondaryColor}`};
     }
     p {
       margin: 0;
