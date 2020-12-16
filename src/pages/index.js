@@ -62,18 +62,23 @@ export const StyledView = styled.div`
   }
 
   .headingBiographyWrapper {
-    margin: 3rem 2rem 0 2rem;
+    margin: 0 2rem 0 2rem;
     h3 {
       text-align: left;
       font-size: 46px;
-      color: ${({ theme }) => theme.body};
-      text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.secondaryColor}, 1px -1px 0 ${theme.secondaryColor}, -1px 1px 0 ${theme.secondaryColor}, 1px 1px 0 ${theme.secondaryColor}`};
+      font-family: ${({ theme }) => theme.primaryFont};
+      color: ${({ theme }) => theme.secondaryColor};
+      text-shadow: ${({ theme }) => `-1px -1px 0 ${theme.primaryColor}, 1px -1px 0 ${theme.primaryColor}, -1px 1px 0 ${theme.primaryColor}, 1px 1px 0 ${theme.primaryColor}`};
+    }
+    p {
+      margin: 0;
     }
   }
 
   .headingPortfolioWrapper {
     margin: 3rem 2rem 0 2rem;
     h3 {
+      margin: 0;
       text-align: right;
       font-size: 46px;
       color: ${({ theme }) => theme.body};
